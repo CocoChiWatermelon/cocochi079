@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作品集</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+      background-size: 600% 600%;
+      color: #125567;
+      animation: dynamicBackground 30s ease-in-out infinite;
+    }
+
+    @keyframes dynamicBackground {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    header {
+      background-color: #C2DDC7;
+      color: #125567;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #125567;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #88D89E;
+      color: #FFFFFF;
+    }
+
+    main {
+      background-color: white;
+      padding: 20px;
+      flex: 1;
+      text-align: center;
+    }
+
+    .portfolio-section {
+      padding: 40px 20px;
+      background-color: #F4EAD5;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .portfolio-section h1 {
+      font-size: 2.5em;
+      color: #125567;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-section p {
+      font-size: 1.2em;
+      color: #125567;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .portfolio-item {
+      width: 300px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .portfolio-item h3 {
+      font-size: 1.2em;
+      color: #125567;
+      margin: 10px 0;
+    }
+
+    .portfolio-item p {
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 0.8em;
+      color: #125567;
+      background-color: #f8f8f8;
+    }
+
+    #topButton {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #125567;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    #topButton:hover {
+      background-color: #88D89E;
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-item {
+        width: 100%;
+      }
+    }
+  </style>
+  <script>
+    // 顯示或隱藏按鈕
+    window.onscroll = function () {
+      const topButton = document.getElementById("topButton");
+      if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+      ) {
+        topButton.style.display = "block";
+      } else {
+        topButton.style.display = "none";
+      }
+    };
+
+    // 滾動到頂部
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>作品集</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">歡迎頁</a></li>
+      <li><a href="main.html">首頁</a></li>
+      <li><a href="about.html">關於我</a></li>
+      <li><a href="services.html">服務項目</a></li>
+      <li><a href="contact.html">聯絡方式</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="portfolio-section">
+      <h1>我的作品集</h1>
+      <p>這裡展示了一些我過去的設計作品。希望你能喜歡！</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="https://imagizer.imageshack.com/img922/2334/s96Xf0.jpg" alt="月曆設計">
+        <h3>月曆設計</h3>
+        <p>以台灣個月漁獲劃分甲殼類、紅肉魚類、白肉魚類、深海大型魚類去做介紹的月曆。</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://imagizer.imageshack.com/img922/852/nFeIAL.jpg" alt="海報設計">
+        <h3>郵戳設計</h3>
+        <p>發想自台灣各有特色的歷任總統。</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://imagizer.imageshack.com/img923/3130/IW3NGt.jpg" alt="活動海報">
+        <h3>活動海報</h3>
+        <p>食安議題。</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://imagizer.imageshack.com/img922/5929/ttvNAh.jpg" alt="名片設計">
+        <h3>名片設計</h3>
+        <p>簡單而不失專業感的名片設計。</p>
+      </div>
+        </div>
+      <div class="portfolio-item">
+        <img src="https://imagizer.imageshack.com/img922/2194/T3NLb0.jpg" alt="海報設計">
+        <h3>繪本設計</h3>
+        <p>作業內容涵蓋故事情節、繪圖上色、送印。</p>
+      </div>
+    </div>
+  </main>
+
+  <button id="topButton" onclick="scrollToTop()">⬆️ 回到頂端</button>
+
+  <footer>
+    <p>&copy; 2025 Coco紀聿珈</p>
+  </footer>
+</body>
+
+</html>
